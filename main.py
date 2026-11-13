@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """News-image-01 entry: copy the bundled world-news picture to /output/entry.png.
 
-The picture is entry.png beside this file (JPEG bytes, 1024x1024, 266604
-bytes): variant A, "13 NOV 2026 — THE WORLD TODAY", a dark magazine-cover
-montage with a glowing globe at the centre and six illustrated vignettes
-of Friday 13 November 2026's biggest verified news stories (Senate
-summons ex-Nvidia CEO; Zelensky meets US envoys; drone hits Russian
-warship; Iran claims strike on US radar; Microsoft 365 down worldwide;
-strike hits Gaza hospital), plus a footer ticker with three more (FBI
-seizes $1.2bn stolen crypto; US record 483,200 deportations; Kane breaks
-England caps record). Every label was read back from the rendered image
-and verified spelled correctly; see VARIANTS.md for the four variants
-built and why D won. The program does a plain byte copy: no network, no
-randomness, no clock, so two runs write exactly the same bytes.
+The picture is entry.png beside this file (JPEG bytes, 1024x1024, 348561
+bytes): variant B, "13 NOV 2026 — THE WORLD TODAY", a newspaper front
+page with a masthead and red headline, a glowing globe at the centre
+and six illustrated vignettes of Friday 13 November 2026's biggest
+verified news stories (Senate summons ex-Nvidia CEO; Zelensky meets US
+envoys; drone hits Russian warship; Iran claims strike on US radar;
+Microsoft 365 down worldwide; strike hits Gaza hospital), plus a footer
+ticker with three more (FBI seizes $1.2bn stolen crypto; US record
+483,200 deportations; Kane breaks England caps record). Every label was
+read back from the rendered image and verified spelled correctly; see
+VARIANTS.md for the four variants built and why D won. The program does
+a plain byte copy: no network, no randomness, no clock, so two runs
+write exactly the same bytes.
 """
 
 import os
