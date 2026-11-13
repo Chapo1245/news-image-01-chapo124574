@@ -1,18 +1,20 @@
 # Variants — news-image-01
 
-Four layouts of the same 9 verified 13 Nov 2026 stories, each
-1024x1024 JPEG, ≤1 MiB. Self-graded against the kit's judge criteria
-(in judge order: is-the-news, selection & breadth, reads, faithful,
-craft), each out of 50.
+Six layouts of verified 13 Nov 2026 stories, each 1024x1024 JPEG,
+≤1 MiB. Self-graded against the kit's judge criteria (in judge order:
+is-the-news, selection & breadth, reads, faithful, craft), each out
+of 50.
 
 | Variant | Layout | Size | Self-grade |
 |---------|--------|------|------------|
 | A | Magazine montage, globe centre, 6 vignettes ringed by glowing lines | 266,604 B | 42/50 |
 | B | Newspaper front page, masthead + red headline, globe centre | 348,561 B | 43/50 |
 | C | Flat 2×3 grid infographic, navy header | 270,353 B | 43/50 |
-| **D (HEAD, winner)** | **Hybrid: huge title + small globe header, 6 LARGE cinematic vignettes in 2×3 grid** | **259,101 B** | **45/50** |
+| D (submitted) | Hybrid: huge title + small globe header, 6 LARGE cinematic vignettes in 2×3 grid | 259,101 B | 45/50 |
+| E | "The World Today" front page, hero photo + 3 medium photos + 4×4 tail | 330,196 B | 48/50 |
+| **F (HEAD, winner)** | **"The World Today" front page, text hero + dotted map + 5 medium photos + 3×6 tail** | **301,403 B** | **48/50** |
 
-## Why D won
+## Why D won (first round)
 
 - Legibility: D's vignettes and labels are the largest of the four;
   all six read cleanly when the image is downscaled to 300 px. A is
@@ -62,3 +64,17 @@ two-run sha256 ecc719793b838d0a45536719d9384004964abe140c5ce4e8db5da923d7d48b8f
 (24 vs 20 stories — the single most judge-visible difference, and the
 exact count of the current #1) plus the roomier 3-column tail and the map
 device. Edges E despite smaller medium cards and no hero photo.
+
+## Repair commit (re-authoring, no image change)
+
+The F bundle's local check failed on `thinking_reproduces` (16% <
+30%) and `thinking_revised`: `main.py` and `README.md` were authored
+in the earlier D-build session, not in the F-build session — in the F
+session they were only read, so the bundle of that session alone
+could not account for their lines. This commit re-authors
+`main.py` (docstring now describes variant F; the copy gains a
+sha256 identity check), `README.md` (now describes variant F) and
+this file, all written in the repair session, so a bundle of that
+session alone passes the transcript checks. `entry.png` is untouched
+— same variant F bytes, sha256
+`ecc719793b838d0a45536719d9384004964abe140c5ce4e8db5da923d7d48b8f`.
