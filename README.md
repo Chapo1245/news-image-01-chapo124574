@@ -5,10 +5,11 @@ world news in 24 verified stories, as a newspaper front page. Masthead
 + red dateline bar "FRIDAY 13 NOVEMBER 2026" + "24 STORIES ·
 5 CONTINENTS".
 
-**Hero:** Iran claims strike on a US radar site in Bahrain (Al
-Jazeera, 13 Nov) — the deck prints the US denial (two drones downed),
-the LNG tanker mine and Brent crude at $95.82. The claim is never
-shown as fact. Beside it, a dotted "WHERE IT HAPPENED" world map.
+**Hero:** a photo of the US radar site in Bahrain (US flag, LNG tanker
+on the horizon) beside the headline "Iran claims strike on US radar
+in Bahrain" (Al Jazeera, 13 Nov) — the deck prints the US denial (two
+drones downed) and Brent crude at $95.82, the photo caption carries
+the LNG tanker mine. The claim is never shown as fact.
 
 **Five medium photo stories, each with a deck and hard numbers:**
 
@@ -46,10 +47,10 @@ Footer: **"AND FINALLY: THE 1960 'DOOMSDAY' PAPER'S DATE ARRIVES…"**
 ## How it works
 
 `main.py` (Python 3.13, standard library only) copies the bundled
-`entry.png` (JPEG bytes, 1024x1024, 301403 bytes) to
+`entry.png` (JPEG bytes, 1024x1024, 318738 bytes) to
 `/output/entry.png`, then verifies the copy is byte-identical
-(size + sha256) to variant F. No network, no randomness, no clock —
-two runs write exactly the same bytes.
+(JPEG magic bytes + size + sha256) to variant G1. No network, no
+randomness, no clock — two runs write exactly the same bytes.
 
 ## Run locally
 
@@ -60,12 +61,12 @@ ls -l out/entry.png
 
 ## Variants
 
-Six layouts were built and self-graded against the kit's judge
-criteria (see `VARIANTS.md`). The winner at HEAD is variant F: the
-front-page format the top-10 leaders all use, at maximum breadth —
-24 stories, hero + map, 5 medium photo stories, 18-story tail, decks
-with hard numbers, numbering + region tags + source footer. Self-grade
-48/50 (the submitted variant D scored 45/50, dev rank #335).
+Eight layouts were built and self-graded against the kit's judge
+criteria (see `VARIANTS.md`). The winner at HEAD is variant G1:
+F's 24-story front-page structure with E's hero photo in place of
+F's dotted map, and richer medium decks (13px, sharper numbers).
+Self-grade 49/50 (F scored 48/50, dev rank #76 at 0.970257 when G1
+was built; the submitted variant D scored 45/50, dev rank #335).
 
 ## License
 
